@@ -1,0 +1,1 @@
+@@cd_cwd hexo new @@blog_name;start @@md_exe_name @@blog_path

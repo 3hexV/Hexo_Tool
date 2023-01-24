@@ -1,0 +1,1 @@
+@@cd_cwd git init .;git clone @@git_repo;copy @@repo_name/* ./; remove-item -recurse -force ./@@repo_name

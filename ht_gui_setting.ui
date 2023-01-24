@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>681</width>
+    <height>191</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>配置</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>661</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>文本编辑器：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="le_web">
+      <property name="placeholderText">
+       <string>空表示使用默认浏览器</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="le_note"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="le_md"/>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="btn_canle">
+      <property name="text">
+       <string>取消</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Markdown编辑器：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>浏览器:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="btn_save">
+      <property name="text">
+       <string>保存并应用</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="4">
+     <widget class="QLabel" name="label_4">
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>请选择可执行文件，或填写命令（例如notepad)</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" colspan="2">
+     <widget class="QPushButton" name="btn_note">
+      <property name="text">
+       <string>选择</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QPushButton" name="btn_md">
+      <property name="text">
+       <string>选择</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" colspan="2">
+     <widget class="QPushButton" name="btn_web">
+      <property name="text">
+       <string>选择</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="btn_def">
+      <property name="text">
+       <string>恢复默认</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>le_note</tabstop>
+  <tabstop>btn_note</tabstop>
+  <tabstop>le_md</tabstop>
+  <tabstop>btn_md</tabstop>
+  <tabstop>le_web</tabstop>
+  <tabstop>btn_web</tabstop>
+  <tabstop>btn_save</tabstop>
+  <tabstop>btn_canle</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_note</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>select_note_exe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>531</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>648</x>
+     <y>51</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_md</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>select_md_exe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>632</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_web</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>select_web_exe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>536</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>637</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_save</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>509</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>422</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_canle</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>617</x>
+     <y>154</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>680</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_def</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>select_def()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>select_note_exe()</slot>
+  <slot>select_md_exe()</slot>
+  <slot>select_web_exe()</slot>
+  <slot>select_def()</slot>
+ </slots>
+</ui>

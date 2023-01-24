@@ -1,0 +1,1 @@
+@@cd_cwd @@clean_cache hexo g ; hexo s;
